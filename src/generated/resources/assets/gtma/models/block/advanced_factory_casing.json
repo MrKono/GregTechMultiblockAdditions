@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtma:block/casings/metal/machine_casing_americium"
+  }
+}

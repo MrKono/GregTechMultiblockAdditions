@@ -6,6 +6,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 
 import kono.gtma.common.data.GTMARegistration;
+import kono.gtma.data.GTMADataGen;
 
 public class CommonProxy {
 
@@ -19,6 +20,7 @@ public class CommonProxy {
     public static void init() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        GTMADataGen.init();
         GTMARegistration.REGISTRATE.registerRegistrate();
     }
 

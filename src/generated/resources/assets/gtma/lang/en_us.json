@@ -1,0 +1,11 @@
+{
+  "block.gtma.advanced_factory_casing": "Advanced Factory Casing",
+  "block.gtma.americium_gearbox_casing": "Americium Gearbox Casing",
+  "block.gtma.americium_pipe_casing": "Americium Pipe Casing",
+  "block.gtma.factory_casing": "Factory Casing",
+  "block.gtma.industrial_ore_factory": "Industrial Ore Factory",
+  "block.gtma.iridium_gearbox_casing": "Iridium Gearbox Casing",
+  "block.gtma.iridium_pipe_casing": "Iridium Pipe Casing",
+  "block.gtma.ore_factory": "Ore Factory",
+  "itemGroup.gtma.item": "GTMultiblockAdditions"
+}
