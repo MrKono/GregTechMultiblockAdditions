@@ -1,23 +1,12 @@
 package kono.gtma.common.data;
 
-import java.util.function.Supplier;
-
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 
+import static kono.gtma.api.utils.GTMAUtils.createCasingBlock;
 import static kono.gtma.api.utils.GTMAValues.modId;
 import static kono.gtma.common.data.GTMARegistration.REGISTRATE;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.nullness.NonNullFunction;
-import com.tterrag.registrate.util.nullness.NonNullSupplier;
 
 public class GTMABlocks {
 
@@ -51,27 +40,20 @@ public class GTMABlocks {
             "americium_gearbox_casing",
             modId("block/casings/gear/machine_casing_gearbox_americium"));
 
-    public static BlockEntry<Block> createCasingBlock(String name, ResourceLocation texture) {
-        return createCasingBlock(name, Block::new, texture, () -> Blocks.IRON_BLOCK,
-                () -> RenderType::cutoutMipped);
-    }
-
-    @SuppressWarnings("all")
-    public static BlockEntry<Block> createCasingBlock(String name,
-                                                      NonNullFunction<BlockBehaviour.Properties, Block> blockSupplier,
-                                                      ResourceLocation texture,
-                                                      NonNullSupplier<? extends Block> properties,
-                                                      Supplier<Supplier<RenderType>> type) {
-        return REGISTRATE.block(name, blockSupplier)
-                .initialProperties(properties)
-                .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false)).addLayer(type)
-                .blockstate((ctx, prov) -> {
-                    prov.simpleBlock(ctx.getEntry(), prov.models().cubeAll(name, texture));
-                })
-                .tag(TagKey.create(BuiltInRegistries.BLOCK.key(), new ResourceLocation("forge", "mineable/wrench")),
-                        BlockTags.MINEABLE_WITH_PICKAXE)
-                .item(BlockItem::new)
-                .build()
-                .register();
-    }
+    // Tank Wall
+    public static final BlockEntry<Block> TANK_WALL_INVAR = createCasingBlock(
+            "invar_tank_wall",
+            modId("block/casings/tank/tank_wall_invar"));
+    public static final BlockEntry<Block> TANK_WALL_NETHERITE = createCasingBlock(
+            "netherite_tank_wall",
+            modId("block/casings/tank/tank_wall_netherite"));
+    public static final BlockEntry<Block> TANK_WALL_TITANIUM = createCasingBlock(
+            "titanium_tank_wall",
+            modId("block/casings/tank/tank_wall_titanium"));
+    public static final BlockEntry<Block> TANK_WALL_TUNGSTEN = createCasingBlock(
+            "tungsten_tank_wall",
+            modId("block/casings/tank/tank_wall_tungsten"));
+    public static final BlockEntry<Block> TANK_WALL_TUNGSTENSTEEL = createCasingBlock(
+            "tungstensteel_tank_wall",
+            modId("block/casings/tank/tank_wall_tungstensteel"));
 }

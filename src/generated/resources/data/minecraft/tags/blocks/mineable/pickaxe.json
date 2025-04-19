@@ -5,6 +5,11 @@
     "gtma:iridium_pipe_casing",
     "gtma:americium_pipe_casing",
     "gtma:iridium_gearbox_casing",
-    "gtma:americium_gearbox_casing"
+    "gtma:americium_gearbox_casing",
+    "gtma:invar_tank_wall",
+    "gtma:netherite_tank_wall",
+    "gtma:titanium_tank_wall",
+    "gtma:tungsten_tank_wall",
+    "gtma:tungstensteel_tank_wall"
   ]
 }

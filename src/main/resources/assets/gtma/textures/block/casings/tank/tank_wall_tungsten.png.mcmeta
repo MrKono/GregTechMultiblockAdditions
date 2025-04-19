@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "gtma:block/casings/tank/tank_wall_tungsten_ctm"
+    }
+}
