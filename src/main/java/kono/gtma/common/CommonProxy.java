@@ -6,6 +6,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 
 import kono.gtma.common.data.GTMARegistration;
+import kono.gtma.common.data.materials.GTMAMaterialFlagAdditions;
 import kono.gtma.data.GTMADataGen;
 
 public class CommonProxy {
@@ -24,7 +25,9 @@ public class CommonProxy {
         GTMARegistration.REGISTRATE.registerRegistrate();
     }
 
-    public void modifyMaterialInfo(MaterialEvent event) {}
+    public void modifyMaterialInfo(MaterialEvent event) {
+        GTMAMaterialFlagAdditions.init();
+    }
 
     public void modifyMaterialInfoLowest(MaterialEvent event) {}
 }

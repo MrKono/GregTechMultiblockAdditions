@@ -18,6 +18,8 @@ public class GTMARecipeManager {
             }
             OreFactoryHandler.register(provider, material);
         }
+        GTMACraftingLoader.register(provider);
+        GTMAMachineLoader.register(provider);
     }
 
     public static void removeRecipes(Consumer<ResourceLocation> consumer) {}
