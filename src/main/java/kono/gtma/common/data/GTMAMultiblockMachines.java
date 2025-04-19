@@ -164,12 +164,12 @@ public class GTMAMultiblockMachines {
             GTMABlocks.TANK_WALL_TUNGSTEN, TUNGSTEN_TANK_VALVE::getBlock,
             null,
             (builder, overlay) -> builder.workableCasingRenderer(
-                    modId("block/casings/tank/tank_wall_invar"), overlay));
+                    modId("block/casings/tank/tank_wall_tungsten"), overlay));
 
     public static final MachineDefinition TUNGSTENSTEEL_TANK_VALVE = registerTankValve(
             "tungstensteel_tank_valve", "Tungstensteel Tank Valve", true,
             (builder, overlay) -> builder.workableCasingRenderer(
-                    modId("block/casings/tank/tank_wall_invar"), overlay));
+                    modId("block/casings/tank/tank_wall_tungstensteel"), overlay));
     public static final MultiblockMachineDefinition TUNGSTENSTEEL_MULTIBLOCK_TANK = registerMultiblockTank(
             "tungstensteel_multiblock_tank", "Tungstensteel Multiblock Tank", 16000 * 1000,
             GTMABlocks.TANK_WALL_TUNGSTENSTEEL, TUNGSTENSTEEL_TANK_VALVE::getBlock,
