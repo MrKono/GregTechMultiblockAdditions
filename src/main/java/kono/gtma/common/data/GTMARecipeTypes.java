@@ -17,7 +17,8 @@ public class GTMARecipeTypes {
             .setSlotOverlay(false, false, GuiTextures.IN_SLOT_OVERLAY)
             .setSlotOverlay(true, false, GuiTextures.DUST_OVERLAY)
             .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
-            .setSound(GTSoundEntries.MACERATOR);
+            .setSound(GTSoundEntries.MACERATOR)
+            .prepareBuilder(recipeBuilder -> recipeBuilder.EUt(30));
 
     public static void init() {}
 }

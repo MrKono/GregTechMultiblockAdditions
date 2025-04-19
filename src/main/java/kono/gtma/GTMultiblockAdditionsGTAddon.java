@@ -11,6 +11,7 @@ import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 import kono.gtma.api.utils.GTMAValues;
 import kono.gtma.common.data.GTMARegistration;
+import kono.gtma.data.recipe.GTMARecipeManager;
 
 @GTAddon
 public class GTMultiblockAdditionsGTAddon implements IGTAddon {
@@ -32,8 +33,12 @@ public class GTMultiblockAdditionsGTAddon implements IGTAddon {
     public void registerTagPrefixes() {}
 
     @Override
-    public void addRecipes(Consumer<FinishedRecipe> provider) {}
+    public void addRecipes(Consumer<FinishedRecipe> provider) {
+        GTMARecipeManager.addRecipes(provider);
+    }
 
     @Override
-    public void removeRecipes(Consumer<ResourceLocation> consumer) {}
+    public void removeRecipes(Consumer<ResourceLocation> consumer) {
+        GTMARecipeManager.removeRecipes(consumer);
+    }
 }
