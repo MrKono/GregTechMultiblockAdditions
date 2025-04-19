@@ -23,7 +23,7 @@ public class GTMAMultiblockMachines {
     }
 
     public static final MultiblockMachineDefinition ORE_FACTORY = REGISTRATE.multiblock(
-            "ore_factory", WorkableElectricMultiblockMachine::new)
+            "ore_processing_factory", WorkableElectricMultiblockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTMARecipeTypes.ORE_FACTORY)
             .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
@@ -72,7 +72,7 @@ public class GTMAMultiblockMachines {
                     GTCEu.id("block/multiblock/electric_blast_furnace"))
             .register();
     public static final MultiblockMachineDefinition INDUSTRIAL_ORE_FACTORY = REGISTRATE.multiblock(
-            "industrial_ore_factory", WorkableElectricMultiblockMachine::new)
+            "industrial_ore_processing_factory", WorkableElectricMultiblockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTMARecipeTypes.ORE_FACTORY)
             .recipeModifiers(GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
