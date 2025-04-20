@@ -71,14 +71,15 @@ public class GTMACraftingLoader {
         walls.add(Pair.of(GTMaterials.TungstenSteel, TANK_WALL_TUNGSTENSTEEL));
         for (Pair<Material, BlockEntry<Block>> entry : walls) {
             VanillaRecipeHelper.addShapedRecipe(provider, true, entry.left().getName() + "_tank_wall",
-                    entry.second().asStack(2), "PPP", "wFh", "PPP",
+                    entry.second().asStack(casingAmount), "PPP", "wFh", "PPP",
                     'P', new UnificationEntry(TagPrefix.plate, entry.left()),
                     'F', new UnificationEntry(TagPrefix.frameGt, entry.left()));
         }
         List<Triple<BlockEntry<Block>, BlockEntry<Block>, Material>> wallConvert = new ArrayList<>();
         wallConvert.add(new Triple<>(GTBlocks.CASING_INVAR_HEATPROOF, TANK_WALL_INVAR, GTMaterials.Invar));
         wallConvert.add(new Triple<>(GTBlocks.CASING_TITANIUM_STABLE, TANK_WALL_TITANIUM, GTMaterials.Titanium));
-        wallConvert.add(new Triple<>(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST, TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel));
+        wallConvert.add(
+                new Triple<>(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST, TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel));
         for (Triple<BlockEntry<Block>, BlockEntry<Block>, Material> entry : wallConvert) {
             VanillaRecipeHelper.addShapelessRecipe(provider, "casing_to_wall_" + entry.third.getName(),
                     entry.first.asStack(), entry.second);

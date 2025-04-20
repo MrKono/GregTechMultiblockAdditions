@@ -20,6 +20,7 @@ public class GTMARecipeManager {
         }
         GTMACraftingLoader.register(provider);
         GTMAMachineLoader.register(provider);
+        GTMAMaterialInfoLoader.init();
     }
 
     public static void removeRecipes(Consumer<ResourceLocation> consumer) {}
