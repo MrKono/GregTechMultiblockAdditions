@@ -44,6 +44,12 @@ public class GTMABlocks {
     public static final BlockEntry<Block> TANK_WALL_INVAR = createCasingBlock(
             "invar_tank_wall",
             modId("block/casings/tank/tank_wall_invar"));
+    public static final BlockEntry<Block> TANK_WALL_ALUMINIUM = createCasingBlock(
+            "aluminium_tank_wall",
+            modId("block/casings/tank/tank_wall_aluminium"));
+    public static final BlockEntry<Block> TANK_WALL_STAINLESS = createCasingBlock(
+            "stainless_steel_tank_wall",
+            modId("block/casings/tank/tank_wall_stainlesssteel"));
     public static final BlockEntry<Block> TANK_WALL_NETHERITE = createCasingBlock(
             "netherite_tank_wall",
             modId("block/casings/tank/tank_wall_netherite"));
@@ -54,6 +60,6 @@ public class GTMABlocks {
             "tungsten_tank_wall",
             modId("block/casings/tank/tank_wall_tungsten"));
     public static final BlockEntry<Block> TANK_WALL_TUNGSTENSTEEL = createCasingBlock(
-            "tungsten_steel_tank_wall",
+            "tungstensteel_tank_wall",
             modId("block/casings/tank/tank_wall_tungstensteel"));
 }

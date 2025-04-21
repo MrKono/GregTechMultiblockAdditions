@@ -35,6 +35,8 @@ public class GTMACraftingLoader {
         // Tank Valves
         List<Triple<BlockEntry<Block>, Material, MachineDefinition>> tankValves = new ArrayList<>();
         tankValves.add(new Triple<>(TANK_WALL_INVAR, GTMaterials.Invar, INVAR_TANK_VALVE));
+        tankValves.add(new Triple<>(TANK_WALL_ALUMINIUM, GTMaterials.Aluminium, ALUMINIUM_TANK_VALVE));
+        tankValves.add(new Triple<>(TANK_WALL_STAINLESS, GTMaterials.StainlessSteel, STAINLESS_TANK_VALVE));
         tankValves.add(new Triple<>(TANK_WALL_NETHERITE, GTMaterials.Netherite, NETHERITE_TANK_VALVE));
         tankValves.add(new Triple<>(TANK_WALL_TITANIUM, GTMaterials.Titanium, TITANIUM_TANK_VALVE));
         tankValves.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_TANK_VALVE));
@@ -49,6 +51,8 @@ public class GTMACraftingLoader {
         // Multiblock tanks
         List<Triple<BlockEntry<Block>, Material, MachineDefinition>> tanks = new ArrayList<>();
         tankValves.add(new Triple<>(TANK_WALL_INVAR, GTMaterials.Invar, INVAR_MULTIBLOCK_TANK));
+        tankValves.add(new Triple<>(TANK_WALL_ALUMINIUM, GTMaterials.Aluminium, ALUMINIUM_MULTIBLOCK_TANK));
+        tankValves.add(new Triple<>(TANK_WALL_STAINLESS, GTMaterials.StainlessSteel, STAINLESS_MULTIBLOCK_TANK));
         tankValves.add(new Triple<>(TANK_WALL_NETHERITE, GTMaterials.Netherite, NETHERITE_MULTIBLOCK_TANK));
         tankValves.add(new Triple<>(TANK_WALL_TITANIUM, GTMaterials.Titanium, TITANIUM_MULTIBLOCK_TANK));
         tankValves.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_MULTIBLOCK_TANK));
@@ -65,6 +69,8 @@ public class GTMACraftingLoader {
         // TankWalls
         List<Pair<Material, BlockEntry<Block>>> walls = new ArrayList<>();
         walls.add(Pair.of(GTMaterials.Invar, TANK_WALL_INVAR));
+        walls.add(Pair.of(GTMaterials.Aluminium, TANK_WALL_ALUMINIUM));
+        walls.add(Pair.of(GTMaterials.StainlessSteel, TANK_WALL_STAINLESS));
         walls.add(Pair.of(GTMaterials.Netherite, TANK_WALL_NETHERITE));
         walls.add(Pair.of(GTMaterials.Titanium, TANK_WALL_TITANIUM));
         walls.add(Pair.of(GTMaterials.Tungsten, TANK_WALL_TUNGSTEN));
@@ -77,6 +83,8 @@ public class GTMACraftingLoader {
         }
         List<Triple<BlockEntry<Block>, BlockEntry<Block>, Material>> wallConvert = new ArrayList<>();
         wallConvert.add(new Triple<>(GTBlocks.CASING_INVAR_HEATPROOF, TANK_WALL_INVAR, GTMaterials.Invar));
+        wallConvert.add(new Triple<>(GTBlocks.CASING_ALUMINIUM_FROSTPROOF, TANK_WALL_ALUMINIUM, GTMaterials.Aluminium));
+        wallConvert.add(new Triple<>(GTBlocks.CASING_STAINLESS_CLEAN, TANK_WALL_STAINLESS, GTMaterials.StainlessSteel));
         wallConvert.add(new Triple<>(GTBlocks.CASING_TITANIUM_STABLE, TANK_WALL_TITANIUM, GTMaterials.Titanium));
         wallConvert.add(
                 new Triple<>(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST, TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel));

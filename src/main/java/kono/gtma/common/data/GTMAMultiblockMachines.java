@@ -183,12 +183,34 @@ public class GTMAMultiblockMachines {
             (builder, overlay) -> builder.workableCasingRenderer(
                     modId("block/casings/tank/tank_wall_invar"), overlay));
 
+    public static final MachineDefinition ALUMINIUM_TANK_VALVE = registerTankValve(
+            "aluminium_tank_valve", "Aluminium Tank Valve", true,
+            (builder, overlay) -> builder.workableCasingRenderer(
+                    modId("block/casings/tank/tank_wall_aluminium"), overlay));
+    public static final MultiblockMachineDefinition ALUMINIUM_MULTIBLOCK_TANK = registerMultiblockTank(
+            "aluminium_multiblock_tank", "Aluminium Multiblock Tank", 2000 * 1000,
+            GTMABlocks.TANK_WALL_ALUMINIUM, ALUMINIUM_TANK_VALVE::getBlock,
+            null,
+            (builder, overlay) -> builder.workableCasingRenderer(
+                    modId("block/casings/tank/tank_wall_aluminium"), overlay));
+
+    public static final MachineDefinition STAINLESS_TANK_VALVE = registerTankValve(
+            "stainless_steel_tank_valve", "Stainless Steel Tank Valve", true,
+            (builder, overlay) -> builder.workableCasingRenderer(
+                    modId("block/casings/tank/tank_wall_stainlesssteel"), overlay));
+    public static final MultiblockMachineDefinition STAINLESS_MULTIBLOCK_TANK = registerMultiblockTank(
+            "stainless_steel_multiblock_tank", "Stainless Steel Multiblock Tank", 4000 * 1000,
+            GTMABlocks.TANK_WALL_STAINLESS, STAINLESS_TANK_VALVE::getBlock,
+            null,
+            (builder, overlay) -> builder.workableCasingRenderer(
+                    modId("block/casings/tank/tank_wall_stainlesssteel"), overlay));
+
     public static final MachineDefinition NETHERITE_TANK_VALVE = registerTankValve(
             "netherite_tank_valve", "Netherite Tank Valve", true,
             (builder, overlay) -> builder.workableCasingRenderer(
                     modId("block/casings/tank/tank_wall_netherite"), overlay));
     public static final MultiblockMachineDefinition NETHERITE_MULTIBLOCK_TANK = registerMultiblockTank(
-            "netherite_multiblock_tank", "Netherite Multiblock Tank", 3500 * 1000,
+            "netherite_multiblock_tank", "Netherite Multiblock Tank", 6000 * 1000,
             GTMABlocks.TANK_WALL_NETHERITE, NETHERITE_TANK_VALVE::getBlock,
             null,
             (builder, overlay) -> builder.workableCasingRenderer(
@@ -217,11 +239,11 @@ public class GTMAMultiblockMachines {
                     modId("block/casings/tank/tank_wall_tungsten"), overlay));
 
     public static final MachineDefinition TUNGSTENSTEEL_TANK_VALVE = registerTankValve(
-            "tungsten_steel_tank_valve", "Tungstensteel Tank Valve", true,
+            "tungstensteel_tank_valve", "Tungstensteel Tank Valve", true,
             (builder, overlay) -> builder.workableCasingRenderer(
                     modId("block/casings/tank/tank_wall_tungstensteel"), overlay));
     public static final MultiblockMachineDefinition TUNGSTENSTEEL_MULTIBLOCK_TANK = registerMultiblockTank(
-            "tungsten_steel_multiblock_tank", "Tungstensteel Multiblock Tank", 16000 * 1000,
+            "tungstensteel_multiblock_tank", "Tungstensteel Multiblock Tank", 16000 * 1000,
             GTMABlocks.TANK_WALL_TUNGSTENSTEEL, TUNGSTENSTEEL_TANK_VALVE::getBlock,
             null,
             (builder, overlay) -> builder.workableCasingRenderer(

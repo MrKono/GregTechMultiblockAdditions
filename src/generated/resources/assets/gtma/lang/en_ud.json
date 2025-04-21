@@ -1,4 +1,7 @@
 {
+  "block.gtma.aluminium_multiblock_tank": "ʞuɐ⟘ ʞɔoןqıʇןnW ɯnıuıɯnןⱯ",
+  "block.gtma.aluminium_tank_valve": "ǝʌןɐΛ ʞuɐ⟘ ɯnıuıɯnןⱯ",
+  "block.gtma.aluminium_tank_wall": "ןןɐM ʞuɐ⟘ ɯnıuıɯnןⱯ",
   "block.gtma.americium_gearbox_casing": "buısɐƆ xoqɹɐǝ⅁ ɯnıɔıɹǝɯⱯ",
   "block.gtma.americium_pipe_casing": "buısɐƆ ǝdıԀ ɯnıɔıɹǝɯⱯ",
   "block.gtma.americium_plated_factory_casing": "buısɐƆ ʎɹoʇɔɐℲ pǝʇɐןԀ ɯnıɔıɹǝɯⱯ",
@@ -13,6 +16,9 @@
   "block.gtma.netherite_tank_valve": "ǝʌןɐΛ ʞuɐ⟘ ǝʇıɹǝɥʇǝN",
   "block.gtma.netherite_tank_wall": "ןןɐM ʞuɐ⟘ ǝʇıɹǝɥʇǝN",
   "block.gtma.ore_processing_factory": "ʎɹoʇɔɐℲ buıssǝɔoɹԀ ǝɹO",
+  "block.gtma.stainless_steel_multiblock_tank": "ʞuɐ⟘ ʞɔoןqıʇןnW ןǝǝʇS ssǝןuıɐʇS",
+  "block.gtma.stainless_steel_tank_valve": "ǝʌןɐΛ ʞuɐ⟘ ןǝǝʇS ssǝןuıɐʇS",
+  "block.gtma.stainless_steel_tank_wall": "ןןɐM ʞuɐ⟘ ןǝǝʇS ssǝןuıɐʇS",
   "block.gtma.titanium_multiblock_tank": "ʞuɐ⟘ ʞɔoןqıʇןnW ɯnıuɐʇı⟘",
   "block.gtma.titanium_tank_valve": "ǝʌןɐΛ ʞuɐ⟘ ɯnıuɐʇı⟘",
   "block.gtma.titanium_tank_wall": "ןןɐM ʞuɐ⟘ ɯnıuɐʇı⟘",

@@ -1,4 +1,7 @@
 {
+  "block.gtma.aluminium_multiblock_tank": "アルミニウム製マルチブロックタンク",
+  "block.gtma.aluminium_tank_valve": "アルミニウム製タンクバルブ",
+  "block.gtma.aluminium_tank_wall": "アルミニウム製タンク壁",
   "block.gtma.americium_gearbox_casing": "アメリシウム製ギアボックス外装",
   "block.gtma.americium_pipe_casing": "アメリシウム製パイプ外装",
   "block.gtma.americium_plated_factory_casing": "アメリシウムメッキファクトリー外装",
@@ -23,6 +26,9 @@
   "block.gtma.tungstensteel_tank_valve": "タングステンスチール製タンクバルブ",
   "block.gtma.tungstensteel_tank_wall": "タングステンスチール製タンク壁",
   "gtceu.ore_factory": "鉱石処理ファクトリー",
+  "block.gtma.stainless_steel_multiblock_tank": "ステンレススチール製マルチブロックタンク",
+  "block.gtma.stainless_steel_tank_valve": "ステンレススチール製タンクバルブ",
+  "block.gtma.stainless_steel_tank_wall": "ステンレススチール製タンク壁",
   "gtma.machine.ore_factory.tooltip.hold_ctrl": "CTRLで処理方法を表示",
   "gtma.machine.ore_factory.tooltip.process1": "§e1.§7 粉砕 -> 洗浄 -> 粉砕 -> 遠心",
   "gtma.machine.ore_factory.tooltip.process10": "§e10.§7 粉砕 -> 洗浄 -> 粉砕 -> 電磁分離",

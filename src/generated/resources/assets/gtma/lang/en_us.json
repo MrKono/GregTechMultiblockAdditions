@@ -1,4 +1,7 @@
 {
+  "block.gtma.aluminium_multiblock_tank": "Aluminium Multiblock Tank",
+  "block.gtma.aluminium_tank_valve": "Aluminium Tank Valve",
+  "block.gtma.aluminium_tank_wall": "Aluminium Tank Wall",
   "block.gtma.americium_gearbox_casing": "Americium Gearbox Casing",
   "block.gtma.americium_pipe_casing": "Americium Pipe Casing",
   "block.gtma.americium_plated_factory_casing": "Americium Plated Factory Casing",
@@ -13,6 +16,9 @@
   "block.gtma.netherite_tank_valve": "Netherite Tank Valve",
   "block.gtma.netherite_tank_wall": "Netherite Tank Wall",
   "block.gtma.ore_processing_factory": "Ore Processing Factory",
+  "block.gtma.stainless_steel_multiblock_tank": "Stainless Steel Multiblock Tank",
+  "block.gtma.stainless_steel_tank_valve": "Stainless Steel Tank Valve",
+  "block.gtma.stainless_steel_tank_wall": "Stainless Steel Tank Wall",
   "block.gtma.titanium_multiblock_tank": "Titanium Multiblock Tank",
   "block.gtma.titanium_tank_valve": "Titanium Tank Valve",
   "block.gtma.titanium_tank_wall": "Titanium Tank Wall",
