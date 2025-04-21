@@ -43,4 +43,7 @@
   "gtma.machine.ore_factory.tooltip.process9": "§e9.§7 粉砕 -> 洗浄 -> 選別 -> 遠心 / 粉砕 (欠けたものと傷のあるもの)",
   "gtma.machine.ore_factory.tooltip1": "全ての鉱石処理をワンステップで",
   "gtma.machine.ore_factory.tooltip2": "§eプログラム回路§7によって処理方法が変わる",
-  "itemGroup.gtma.item": "GTMultiblockAdditions"}
+  "itemGroup.gtma.item": "GTMultiblockAdditions",
+  "material.gtma.staballoy": "スタバロイ",
+  "material.gtma.tribally": "トリバロイ"
+}

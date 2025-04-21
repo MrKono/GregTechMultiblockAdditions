@@ -12,6 +12,7 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 
 import kono.gtma.api.utils.GTMAValues;
 import kono.gtma.common.data.GTMABlocks;
+import kono.gtma.common.data.GTMAMaterials;
 import kono.gtma.common.data.GTMAMultiblockMachines;
 import kono.gtma.common.data.GTMARecipeTypes;
 
@@ -28,7 +29,9 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void registerMaterials(MaterialEvent event) {}
+    public static void registerMaterials(MaterialEvent event) {
+        GTMAMaterials.init();
+    }
 
     @SubscribeEvent
     public static void registerMaterialPost(PostMaterialEvent event) {}

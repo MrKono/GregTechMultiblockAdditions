@@ -9,6 +9,7 @@ import dev.toma.configuration.config.value.ConfigValue;
 import dev.toma.configuration.config.value.ObjectValue;
 
 import kono.gtma.api.utils.GTMAValues;
+import kono.gtma.common.data.GTMAMaterials;
 
 import com.tterrag.registrate.providers.RegistrateLangProvider;
 
@@ -16,6 +17,8 @@ public class EnglishLangHandler extends LangHandler {
 
     public static void init(RegistrateLangProvider provider) {
         // Materials
+        replace(provider, GTMAMaterials.Tribaloy.getUnlocalizedName(), "Tribaloy");
+        replace(provider, GTMAMaterials.Staballoy.getUnlocalizedName(), "Staballoy");
         // Misc
         // Recipe Name
         replace(provider, "gtceu.ore_factory", "Ore Processing Factory");

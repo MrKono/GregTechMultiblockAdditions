@@ -20,6 +20,7 @@ public class GTMARecipeManager {
         }
         GTMACraftingLoader.register(provider);
         GTMAMachineLoader.register(provider);
+        GTMAMaterialLoader.register(provider);
         GTMAMaterialInfoLoader.init();
     }
 

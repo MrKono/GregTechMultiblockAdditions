@@ -43,5 +43,7 @@
   "gtma.machine.ore_factory.tooltip.process9": "§e9.§7 Macerate -> Ore Washer -> Sifter -> Centrifuge / Macerate (Flawed and Chipped)",
   "gtma.machine.ore_factory.tooltip1": "All ore-processing in a single step",
   "gtma.machine.ore_factory.tooltip2": "Processing varies depending on §eProgrammed Circuit§7",
-  "itemGroup.gtma.item": "GTMultiblockAdditions"
+  "itemGroup.gtma.item": "GTMultiblockAdditions",
+  "material.gtma.staballoy": "Staballoy",
+  "material.gtma.tribally": "Tribaloy"
 }
