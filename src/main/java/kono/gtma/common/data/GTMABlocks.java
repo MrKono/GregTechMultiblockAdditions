@@ -54,6 +54,6 @@ public class GTMABlocks {
             "tungsten_tank_wall",
             modId("block/casings/tank/tank_wall_tungsten"));
     public static final BlockEntry<Block> TANK_WALL_TUNGSTENSTEEL = createCasingBlock(
-            "tungstensteel_tank_wall",
+            "tungsten_steel_tank_wall",
             modId("block/casings/tank/tank_wall_tungstensteel"));
 }
