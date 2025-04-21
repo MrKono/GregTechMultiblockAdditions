@@ -1,5 +1,7 @@
 package kono.gtma.common.data;
 
+import net.minecraft.network.chat.Component;
+
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
@@ -9,6 +11,8 @@ import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMa
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+import com.gregtechceu.gtceu.config.ConfigHolder;
+import com.gregtechceu.gtceu.utils.GTUtil;
 
 import static com.gregtechceu.gtceu.api.pattern.Predicates.*;
 import static kono.gtma.api.utils.GTMAUtils.registerMultiblockTank;
@@ -27,6 +31,29 @@ public class GTMAMultiblockMachines {
             .rotationState(RotationState.ALL)
             .recipeType(GTMARecipeTypes.ORE_FACTORY)
             .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
+            .tooltipBuilder((stack, tooltip) -> {
+                tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip1"));
+                tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip2"));
+                if (GTUtil.isCtrlDown()) {
+                    tooltip.add(Component.empty());
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process1"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process2"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process3"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process4"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process5"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process6"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process7"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process8"));
+                    if (ConfigHolder.INSTANCE.recipes.generateLowQualityGems) {
+                        tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process9"));
+                    }
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process10"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process11"));
+                    tooltip.add(Component.empty());
+                } else {
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.hold_ctrl"));
+                }
+            })
             .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("AAAAAAA#####", "AGGGGGA#####", "AGGGGGA#####", "AGGGGGA#####", "AGGGGGA#####",
@@ -76,6 +103,29 @@ public class GTMAMultiblockMachines {
             .rotationState(RotationState.ALL)
             .recipeType(GTMARecipeTypes.ORE_FACTORY)
             .recipeModifiers(GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
+            .tooltipBuilder((stack, tooltip) -> {
+                tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip1"));
+                tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip2"));
+                if (GTUtil.isCtrlDown()) {
+                    tooltip.add(Component.empty());
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process1"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process2"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process3"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process4"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process5"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process6"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process7"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process8"));
+                    if (ConfigHolder.INSTANCE.recipes.generateLowQualityGems) {
+                        tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process9"));
+                    }
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process10"));
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.process11"));
+                    tooltip.add(Component.empty());
+                } else {
+                    tooltip.add(Component.translatable("gtma.machine.ore_factory.tooltip.hold_ctrl"));
+                }
+            })
             .appearanceBlock(GTMABlocks.FACTORY_CASING)
             .pattern(definition -> FactoryBlockPattern.start()
                     .aisle("AAAAAAA#####", "AGGGGGA#####", "AGGGGGA#####", "AGGGGGA#####", "AGGGGGA#####",
