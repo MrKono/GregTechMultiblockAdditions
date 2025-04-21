@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gtma:factory_casing"
+          "name": "gtma:americium_plated_factory_casing"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "gtma:blocks/factory_casing"
+  "random_sequence": "gtma:blocks/americium_plated_factory_casing"
 }

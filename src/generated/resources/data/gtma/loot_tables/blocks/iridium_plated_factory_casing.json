@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gtma:advanced_factory_casing"
+          "name": "gtma:iridium_plated_factory_casing"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "gtma:blocks/advanced_factory_casing"
+  "random_sequence": "gtma:blocks/iridium_plated_factory_casing"
 }

@@ -1,7 +1,7 @@
 {
   "values": [
-    "gtma:factory_casing",
-    "gtma:advanced_factory_casing",
+    "gtma:iridium_plated_factory_casing",
+    "gtma:americium_plated_factory_casing",
     "gtma:iridium_pipe_casing",
     "gtma:americium_pipe_casing",
     "gtma:iridium_gearbox_casing",

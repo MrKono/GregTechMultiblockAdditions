@@ -18,10 +18,10 @@ public class GTMABlocks {
 
     // MetalCasings
     public static final BlockEntry<Block> FACTORY_CASING = createCasingBlock(
-            "factory_casing",
+            "iridium_plated_factory_casing",
             modId("block/casings/metal/machine_casing_iridium"));
     public static final BlockEntry<Block> ADVANCED_FACTORY_CASING = createCasingBlock(
-            "advanced_factory_casing",
+            "americium_plated_factory_casing",
             modId("block/casings/metal/machine_casing_americium"));
 
     // PipeCasings
