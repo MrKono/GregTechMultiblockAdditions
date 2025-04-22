@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/MrKono/GregTechMultiblockAdditions/blob/master/src/main/resources/assets/mop/textures/logo.png" alt="Logo" width="128" height="128"></p>
+<p align="center"><img src="https://github.com/MrKono/GregTechMultiblockAdditions/blob/master/src/main/resources/assets/gtma/textures/logo.png" alt="Logo" width="128" height="128"></p>
 <h1 align="center">GregTech MultiblockAdditions</h1>
 
 
