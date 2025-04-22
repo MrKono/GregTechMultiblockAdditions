@@ -11,6 +11,7 @@ import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMa
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
 import com.gregtechceu.gtceu.common.data.GTRecipeModifiers;
+import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.utils.GTUtil;
 
@@ -168,6 +169,36 @@ public class GTMAMultiblockMachines {
                     .where('$', air())
                     .build())
             .workableCasingRenderer(modId("block/casings/metal/machine_casing_iridium"),
+                    GTCEu.id("block/multiblock/electric_blast_furnace"))
+            .register();
+    public static final MultiblockMachineDefinition ATMOSPHERE_COLLECTOR = REGISTRATE.multiblock(
+            "atmosphere_collector", WorkableElectricMultiblockMachine::new)
+            .rotationState(RotationState.ALL)
+            .recipeTypes(GTRecipeTypes.GAS_COLLECTOR_RECIPES, GTMARecipeTypes.ATMOSPHERE_COLLECTOR)
+            .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
+                    Component.translatable("gtceu.gas_collector"),
+                    Component.translatable("gtceu.atmosphere_collector")))
+
+            .recipeModifiers(GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
+            .appearanceBlock(GTMABlocks.CASING_TORIBALOY_DUSTPROOF)
+            .pattern(definition -> FactoryBlockPattern.start()
+                    .aisle("CCCCC", "FAAAF", "FAAAF", "FAAAF", "CCCCC")
+                    .aisle("CCCCC", "AGGGA", "AGGGA", "AGGGA", "CCCCC")
+                    .aisle("CCCCC", "AGPGA", "AGPGA", "AGPGA", "CCMCC")
+                    .aisle("CCCCC", "AGGGA", "AGGGA", "AGGGA", "CCCCC")
+                    .aisle("CCSCC", "FAAAF", "FAAAF", "FAAAF", "CCCCC")
+                    .where('C', blocks(GTMABlocks.CASING_TORIBALOY_DUSTPROOF.get()).setMinGlobalLimited(40)
+                            .or(autoAbilities(definition.getRecipeTypes()))
+                            .or(autoAbilities(true, false, true)))
+                    .where('S', controller(blocks(definition.getBlock())))
+                    .where('M', abilities(PartAbility.MUFFLER))
+                    .where('G', blocks(GTBlocks.CASING_GRATE.get()))
+                    .where('F', frames(GTMAMaterials.Staballoy))
+                    .where('P', blocks(GTBlocks.CASING_STEEL_PIPE.get()))
+                    .where('A', air())
+                    .build())
+            .workableCasingRenderer(modId("block/casings/metal/machine_casing_dust_proof_tribaloy"),
                     GTCEu.id("block/multiblock/electric_blast_furnace"))
             .register();
 

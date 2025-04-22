@@ -12,11 +12,16 @@ import com.gregtechceu.gtceu.api.data.chemical.material.stack.UnificationEntry;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.common.data.GTBlocks;
+import com.gregtechceu.gtceu.common.data.GTItems;
+import com.gregtechceu.gtceu.common.data.GTMachines;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
+import com.gregtechceu.gtceu.data.recipe.CustomTags;
 import com.gregtechceu.gtceu.data.recipe.VanillaRecipeHelper;
 
 import kono.gtma.api.utils.Triple;
+import kono.gtma.common.data.GTMAMaterials;
 
+import static com.gregtechceu.gtceu.api.GTValues.*;
 import static kono.gtma.api.utils.GTMAValues.casingAmount;
 import static kono.gtma.common.data.GTMABlocks.*;
 import static kono.gtma.common.data.GTMAMultiblockMachines.*;
@@ -63,6 +68,13 @@ public class GTMACraftingLoader {
                     'R', new UnificationEntry(TagPrefix.ring, entry.second),
                     'C', entry.first);
         }
+        VanillaRecipeHelper.addShapedRecipe(provider, true, "atmosphere_collector",
+                ATMOSPHERE_COLLECTOR.asStack(), "TFT", "CMC", "SFS",
+                'T', new UnificationEntry(TagPrefix.rotor, GTMAMaterials.Tribaloy),
+                'F', GTItems.FLUID_FILTER.asStack(),
+                'C', CustomTags.LuV_CIRCUITS,
+                'M', GTMachines.GAS_COLLECTOR[IV].asStack(),
+                'S', new UnificationEntry(TagPrefix.rotor, GTMAMaterials.Staballoy));
     }
 
     public static void casingRecipe(Consumer<FinishedRecipe> provider) {
@@ -116,6 +128,11 @@ public class GTMACraftingLoader {
                 'P', new UnificationEntry(TagPrefix.plate, GTMaterials.Americium),
                 'N', new UnificationEntry(TagPrefix.pipeNormalItem, GTMaterials.Americium),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMaterials.Americium));
+        // Dust Proof Casing
+        VanillaRecipeHelper.addShapedRecipe(provider, true, "dust_proof_tribaloy",
+                CASING_TORIBALOY_DUSTPROOF.asStack(casingAmount), "PhP", "PFP", "PwP",
+                'P', new UnificationEntry(TagPrefix.plate, GTMAMaterials.Tribaloy),
+                'F', new UnificationEntry(TagPrefix.frameGt, GTMAMaterials.Tribaloy));
     }
 
     public static void miscRecipe(Consumer<FinishedRecipe> provider) {}

@@ -8,6 +8,7 @@ import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.*;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 
+import kono.gtma.common.data.GTMAMaterials;
 import kono.gtma.common.data.GTMAMultiblockMachines;
 
 import static com.gregtechceu.gtceu.api.GTValues.*;
@@ -83,6 +84,13 @@ public class GTMAMachineLoader {
                 .inputItems(TagPrefix.frameGt, GTMaterials.Americium)
                 .circuitMeta(4)
                 .outputItems(AMERICIUM_GEARBOX_CASING, casingAmount)
+                .duration(5 * 20).EUt(VA[LV]).save(provider);
+        // Dust Proof Casing
+        GTRecipeTypes.ASSEMBLER_RECIPES.recipeBuilder("dust_proof_casing")
+                .inputItems(TagPrefix.plate, GTMAMaterials.Tribaloy, 6)
+                .inputItems(TagPrefix.frameGt, GTMAMaterials.Tribaloy, 2)
+                .circuitMeta(6)
+                .outputItems(CASING_TORIBALOY_DUSTPROOF, casingAmount)
                 .duration(5 * 20).EUt(VA[LV]).save(provider);
     }
 

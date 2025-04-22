@@ -23,6 +23,9 @@ public class GTMABlocks {
     public static final BlockEntry<Block> ADVANCED_FACTORY_CASING = createCasingBlock(
             "americium_plated_factory_casing",
             modId("block/casings/metal/machine_casing_americium"));
+    public static final BlockEntry<Block> CASING_TORIBALOY_DUSTPROOF = createCasingBlock(
+            "dust_proof_tribaloy_casing",
+            modId("block/casings/metal/machine_casing_dust_proof_tribaloy"));
 
     // PipeCasings
     public static final BlockEntry<Block> IRIDIUM_PIPE_CASING = createCasingBlock(

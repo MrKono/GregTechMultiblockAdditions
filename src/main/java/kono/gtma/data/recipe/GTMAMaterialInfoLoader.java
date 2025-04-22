@@ -12,6 +12,8 @@ import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 
+import kono.gtma.common.data.GTMAMaterials;
+
 import static com.gregtechceu.gtceu.api.GTValues.M;
 import static kono.gtma.api.utils.GTMAValues.casingAmount;
 import static kono.gtma.common.data.GTMABlocks.*;
@@ -48,7 +50,7 @@ public class GTMAMaterialInfoLoader {
         ChemicalHelper.registerMaterialInfo(AMERICIUM_PIPE_CASING,
                 new ItemMaterialInfo(
                         new MaterialStack(GTMaterials.Americium, ((M * 4) + (M * 3) * 4 + (M * 2)) / casingAmount)));
-        // Tank Wall
+        // Tank Walls and Standard Casing
         List<Pair<BlockEntry<Block>, Material>> walls = new ArrayList<>();
         walls.add(Pair.of(TANK_WALL_INVAR, GTMaterials.Invar));
         walls.add(Pair.of(TANK_WALL_ALUMINIUM, GTMaterials.Aluminium));
@@ -57,13 +59,14 @@ public class GTMAMaterialInfoLoader {
         walls.add(Pair.of(TANK_WALL_TITANIUM, GTMaterials.Titanium));
         walls.add(Pair.of(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten));
         walls.add(Pair.of(TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel));
+        walls.add(Pair.of(CASING_TORIBALOY_DUSTPROOF, GTMAMaterials.Tribaloy));
         for (Pair<BlockEntry<Block>, Material> entry : walls) {
             ChemicalHelper.registerMaterialInfo(entry.left(),
                     new ItemMaterialInfo(
                             new MaterialStack(entry.right(), M * 8 / casingAmount)));
         }
 
-        // Tank Valves (Walls + 4 + 0.25)
+        // Tank Valves (Wall + 4 + 0.25)
         List<Pair<MachineDefinition, Material>> valves = new ArrayList<>();
         valves.add(Pair.of(INVAR_TANK_VALVE, GTMaterials.Invar));
         valves.add(Pair.of(ALUMINIUM_TANK_VALVE, GTMaterials.Aluminium));
@@ -78,7 +81,7 @@ public class GTMAMaterialInfoLoader {
                             new MaterialStack(entry.right(), (M * 8 / casingAmount) + M * 4 + (M / 4))));
         }
 
-        // Multiblock Tanks (Wall + 0.5
+        // Multiblock Tanks (Wall + 0.5)
         List<Pair<MachineDefinition, Material>> tanks = new ArrayList<>();
         tanks.add(Pair.of(INVAR_MULTIBLOCK_TANK, GTMaterials.Invar));
         tanks.add(Pair.of(ALUMINIUM_MULTIBLOCK_TANK, GTMaterials.Aluminium));

@@ -20,5 +20,17 @@ public class GTMARecipeTypes {
             .setSound(GTSoundEntries.MACERATOR)
             .prepareBuilder(recipeBuilder -> recipeBuilder.EUt(30));
 
+    public static final GTRecipeType ATMOSPHERE_COLLECTOR = GTRecipeTypes
+            .register("atmosphere_collector", GTRecipeTypes.ELECTRIC)
+            .setMaxIOSize(2, 0, 1, 1)
+            .setEUIO(IO.IN)
+            .setSlotOverlay(false, false, false, GuiTextures.DUST_OVERLAY)
+            .setSlotOverlay(false, false, true, GuiTextures.INT_CIRCUIT_OVERLAY)
+            .setSlotOverlay(true, true, GuiTextures.CENTRIFUGE_OVERLAY)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, ProgressTexture.FillDirection.LEFT_TO_RIGHT)
+            .setMaxTooltips(4)
+            .setOffsetVoltageText(true)
+            .setSound(GTSoundEntries.COOLING);
+
     public static void init() {}
 }

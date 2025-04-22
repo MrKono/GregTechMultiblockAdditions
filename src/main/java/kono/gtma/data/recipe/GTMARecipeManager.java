@@ -9,6 +9,9 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;
 
+import kono.gtma.data.recipe.handler.AtmosphereCollectorHandler;
+import kono.gtma.data.recipe.handler.OreFactoryHandler;
+
 public class GTMARecipeManager {
 
     public static void addRecipes(Consumer<FinishedRecipe> provider) {
@@ -18,6 +21,7 @@ public class GTMARecipeManager {
             }
             OreFactoryHandler.register(provider, material);
         }
+        AtmosphereCollectorHandler.register(provider);
         GTMACraftingLoader.register(provider);
         GTMAMachineLoader.register(provider);
         GTMAMaterialLoader.register(provider);

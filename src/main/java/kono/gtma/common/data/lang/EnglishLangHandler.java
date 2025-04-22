@@ -22,6 +22,7 @@ public class EnglishLangHandler extends LangHandler {
         // Misc
         // Recipe Name
         replace(provider, "gtceu.ore_factory", "Ore Processing Factory");
+        replace(provider, "gtceu.atmosphere_collector", "Atmosphere Collector");
         // Tooltips
         // ==Ore Factory==
         replace(provider, "gtma.machine.ore_factory.tooltip1", "All ore-processing in a single step");
