@@ -23,6 +23,7 @@ import kono.gtma.common.data.GTMAMaterials;
 
 import static com.gregtechceu.gtceu.api.GTValues.*;
 import static kono.gtma.api.utils.GTMAValues.casingAmount;
+import static kono.gtma.api.utils.GTMAValues.modId;
 import static kono.gtma.common.data.GTMABlocks.*;
 import static kono.gtma.common.data.GTMAMultiblockMachines.*;
 
@@ -47,7 +48,7 @@ public class GTMACraftingLoader {
         tankValves.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_TANK_VALVE));
         tankValves.add(new Triple<>(TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel, TUNGSTENSTEEL_TANK_VALVE));
         for (Triple<BlockEntry<Block>, Material, MachineDefinition> entry : tankValves) {
-            VanillaRecipeHelper.addShapedRecipe(provider, true, entry.second.getName() + "_tank_valve",
+            VanillaRecipeHelper.addShapedRecipe(provider, true, modId(entry.second.getName() + "_tank_valve"),
                     entry.third.asStack(), " R ", "hCw", " O ",
                     'O', new UnificationEntry(TagPrefix.rotor, entry.second),
                     'R', new UnificationEntry(TagPrefix.ring, entry.second),
@@ -63,12 +64,12 @@ public class GTMACraftingLoader {
         tanks.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_MULTIBLOCK_TANK));
         tanks.add(new Triple<>(TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel, TUNGSTENSTEEL_MULTIBLOCK_TANK));
         for (Triple<BlockEntry<Block>, Material, MachineDefinition> entry : tanks) {
-            VanillaRecipeHelper.addShapedRecipe(provider, true, entry.second.getName() + "_tank",
+            VanillaRecipeHelper.addShapedRecipe(provider, true, modId(entry.second.getName() + "_tank"),
                     entry.third.asStack(), " R ", "hCw", " R ",
                     'R', new UnificationEntry(TagPrefix.ring, entry.second),
                     'C', entry.first);
         }
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "atmosphere_collector",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("atmosphere_collector"),
                 ATMOSPHERE_COLLECTOR.asStack(), "TFT", "CMC", "SFS",
                 'T', new UnificationEntry(TagPrefix.rotor, GTMAMaterials.Tribaloy),
                 'F', GTItems.FLUID_FILTER.asStack(),
@@ -88,7 +89,7 @@ public class GTMACraftingLoader {
         walls.add(Pair.of(GTMaterials.Tungsten, TANK_WALL_TUNGSTEN));
         walls.add(Pair.of(GTMaterials.TungstenSteel, TANK_WALL_TUNGSTENSTEEL));
         for (Pair<Material, BlockEntry<Block>> entry : walls) {
-            VanillaRecipeHelper.addShapedRecipe(provider, true, entry.left().getName() + "_tank_wall",
+            VanillaRecipeHelper.addShapedRecipe(provider, true, modId(entry.left().getName() + "_tank_wall"),
                     entry.second().asStack(casingAmount), "PPP", "wFh", "PPP",
                     'P', new UnificationEntry(TagPrefix.plate, entry.left()),
                     'F', new UnificationEntry(TagPrefix.frameGt, entry.left()));
@@ -101,35 +102,35 @@ public class GTMACraftingLoader {
         wallConvert.add(
                 new Triple<>(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST, TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel));
         for (Triple<BlockEntry<Block>, BlockEntry<Block>, Material> entry : wallConvert) {
-            VanillaRecipeHelper.addShapelessRecipe(provider, "casing_to_wall_" + entry.third.getName(),
+            VanillaRecipeHelper.addShapelessRecipe(provider, modId("casing_to_wall_" + entry.third.getName()),
                     entry.first.asStack(), entry.second);
-            VanillaRecipeHelper.addShapelessRecipe(provider, "wall_to_casing" + entry.third.getName(),
+            VanillaRecipeHelper.addShapelessRecipe(provider, modId("wall_to_casing" + entry.third.getName()),
                     entry.second.asStack(), entry.first);
         }
         // Gearbox Casing
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "gearbox_iridium",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("gearbox/iridium"),
                 IRIDIUM_GEARBOX_CASING.asStack(casingAmount), "PhP", "GFG", "PwP",
                 'P', new UnificationEntry(TagPrefix.plate, GTMaterials.Iridium),
                 'G', new UnificationEntry(TagPrefix.gear, GTMaterials.Iridium),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMaterials.Iridium));
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "gearbox_americium",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("gearbox/americium"),
                 AMERICIUM_GEARBOX_CASING.asStack(casingAmount), "PhP", "GFG", "PwP",
                 'P', new UnificationEntry(TagPrefix.plate, GTMaterials.Americium),
                 'G', new UnificationEntry(TagPrefix.gear, GTMaterials.Americium),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMaterials.Americium));
         // Pipe Casing
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "pipe_casing_iridium",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("pipe_casing/iridium"),
                 IRIDIUM_PIPE_CASING.asStack(casingAmount), "PNP", "NFN", "PNP",
                 'P', new UnificationEntry(TagPrefix.plate, GTMaterials.Iridium),
                 'N', new UnificationEntry(TagPrefix.pipeNormalFluid, GTMaterials.Iridium),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMaterials.Iridium));
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "pipe_casing_americium",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("pipe_casing/americium"),
                 AMERICIUM_PIPE_CASING.asStack(casingAmount), "PNP", "NFN", "PNP",
                 'P', new UnificationEntry(TagPrefix.plate, GTMaterials.Americium),
                 'N', new UnificationEntry(TagPrefix.pipeNormalItem, GTMaterials.Americium),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMaterials.Americium));
         // Dust Proof Casing
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "dust_proof_tribaloy",
+        VanillaRecipeHelper.addShapedRecipe(provider, true, modId("metal/dust_proof_tribaloy"),
                 CASING_TORIBALOY_DUSTPROOF.asStack(casingAmount), "PhP", "PFP", "PwP",
                 'P', new UnificationEntry(TagPrefix.plate, GTMAMaterials.Tribaloy),
                 'F', new UnificationEntry(TagPrefix.frameGt, GTMAMaterials.Tribaloy));
