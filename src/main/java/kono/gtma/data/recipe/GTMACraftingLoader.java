@@ -50,14 +50,14 @@ public class GTMACraftingLoader {
         }
         // Multiblock tanks
         List<Triple<BlockEntry<Block>, Material, MachineDefinition>> tanks = new ArrayList<>();
-        tankValves.add(new Triple<>(TANK_WALL_INVAR, GTMaterials.Invar, INVAR_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_ALUMINIUM, GTMaterials.Aluminium, ALUMINIUM_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_STAINLESS, GTMaterials.StainlessSteel, STAINLESS_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_NETHERITE, GTMaterials.Netherite, NETHERITE_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_TITANIUM, GTMaterials.Titanium, TITANIUM_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_MULTIBLOCK_TANK));
-        tankValves.add(new Triple<>(TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel, TUNGSTENSTEEL_MULTIBLOCK_TANK));
-        for (Triple<BlockEntry<Block>, Material, MachineDefinition> entry : tankValves) {
+        tanks.add(new Triple<>(TANK_WALL_INVAR, GTMaterials.Invar, INVAR_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_ALUMINIUM, GTMaterials.Aluminium, ALUMINIUM_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_STAINLESS, GTMaterials.StainlessSteel, STAINLESS_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_NETHERITE, GTMaterials.Netherite, NETHERITE_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_TITANIUM, GTMaterials.Titanium, TITANIUM_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_TUNGSTEN, GTMaterials.Tungsten, TUNGSTEN_MULTIBLOCK_TANK));
+        tanks.add(new Triple<>(TANK_WALL_TUNGSTENSTEEL, GTMaterials.TungstenSteel, TUNGSTENSTEEL_MULTIBLOCK_TANK));
+        for (Triple<BlockEntry<Block>, Material, MachineDefinition> entry : tanks) {
             VanillaRecipeHelper.addShapedRecipe(provider, true, entry.second.getName() + "_tank",
                     entry.third.asStack(), " R ", "hCw", " R ",
                     'R', new UnificationEntry(TagPrefix.ring, entry.second),
