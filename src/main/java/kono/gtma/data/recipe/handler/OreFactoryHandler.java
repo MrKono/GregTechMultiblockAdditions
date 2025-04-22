@@ -1,4 +1,4 @@
-package kono.gtma.data.recipe;
+package kono.gtma.data.recipe.handler;
 
 import java.util.HashMap;
 import java.util.List;
